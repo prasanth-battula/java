@@ -1,0 +1,117 @@
+To find first and last digit 
+package prasanth;
+public class firstandlastdigit
+{   
+    public static void main(String args[]) 
+    {   
+        int number = 502356997;
+        int firstDigit = 0;
+        int lastDigit = 0;
+ 
+        lastDigit = number%10;
+        System.out.println("Last digit: "+lastDigit);
+ 
+        while(number!=0) {
+            firstDigit = number%10;
+            number /= 10;
+        }
+        System.out.println("First digit: "+firstDigit);
+    }
+To find even or odd number given by user
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner g = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int a = g.nextInt();
+
+        if(a % 2 == 0)
+            System.out.println(a + " is even");
+        else
+            System.out.println(a + " is odd");
+    }
+}
+
+To find fionacci series
+
+public class fibonacci {
+
+	public static void main(String[] args) {
+		int n=10, a = 0, b = 1;
+		System.out.println("fibonacci till "+n+" terms");
+		for(int i=1;i<=n;i++) {
+			System.out.print(a+",");
+			int n1=a+b;
+			a=b;
+			b=n1;
+		}
+		
+
+	}
+
+}
+To find Armstrongnumber
+
+public class Armstrong {
+	  public static void main(String[] args) {
+
+	    int low = 999, high = 99999;
+
+	    for(int number = low + 1; number < high; ++number) {
+	      int digits = 0;
+	      int result = 0;
+	      int originalNumber = number;
+
+	      // number of digits calculation
+	      while (originalNumber != 0) {
+	        originalNumber /= 10;
+	        ++digits;
+	      }
+
+	      originalNumber = number;
+
+	      // result contains sum of nth power of its digits
+	      while (originalNumber != 0) {
+	        int remainder = originalNumber % 10;
+	        result += Math.pow(remainder, digits);
+	        originalNumber /= 10;
+	      }
+	      
+
+	      if (result == number) {
+	    	
+	        System.out.print(number + " ");
+	        
+	      }
+	    }
+	  }
+	}
+
+
+To find righthanside traingle of pattren codes
+package prasanth;
+public class pattrens
+{
+ public static void printStars(int n)
+ {
+     int i, j;
+     for(i=0; i<n; i++)
+     {
+         for(j=0; j<=i; j++)
+         {
+             // printing stars
+             System.out.print("* ");
+         }
+         System.out.println();
+     }
+}
+ public static void main(String args[])
+ {
+     int n = 4;
+     printStars(n);
+ }
+}
